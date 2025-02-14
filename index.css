@@ -3,7 +3,7 @@ body {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    background-color: lightcyan;
+    background-color: purple;
 }
 
 @media (max-width: 768px){
