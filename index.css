@@ -1,0 +1,80 @@
+body {
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: lightcyan;
+}
+
+@media (max-width: 768px){
+    .underwater-wonderland,
+    .epipelagic-zone,
+    .mesopelagic-zone,
+    .bathypelagic-zone,
+    .abyssopelagic-zone,
+    .hadalpelagic-zone{
+        font-size: 36px;
+        text-align: center;
+    }
+}
+
+.flex { /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .waves {
+    position: fixed !important;
+    top: 7vmax !important;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 2vmax; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:250px;
+  }
+
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 100vw) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+    .content {
+      height:30vh;
+    }
+    h1 {
+      font-size:24px;
+    }
+  }
+
+
+
